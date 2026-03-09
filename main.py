@@ -1,4 +1,3 @@
-from pprint import pprint
 import re
 # читаем адресную книгу в формате CSV в список contacts_list
 import csv
@@ -48,8 +47,6 @@ for row in cor_contacts_list[1:]:
                 existing[i] = row[i]
 result = [header] + list(merged.values())
 
-
-pprint(result)
 
 with open("phonebook.csv", "w", encoding="utf-8") as f:
     datawriter = csv.writer(f, delimiter=',')
